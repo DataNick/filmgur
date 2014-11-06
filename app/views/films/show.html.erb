@@ -1,5 +1,5 @@
 <h1>Current Clip</h1>
-<%= link_to "Back to Clips", films_url %> | <%= link_to "Edit", edit_film_path(@film) %>
+<%= link_to "Back to Clips", films_url %> | <%= link_to "Edit", edit_film_path(@film) %> | <%= link_to "Delete", @film, method: :delete, data: {confirm: "Are you sure you want to delete this clip?"}  %>
 
 
 <p><%= @film.title %>, <%= @film.artist %></p>

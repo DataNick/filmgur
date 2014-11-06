@@ -41,6 +41,12 @@ class FilmsController < ApplicationController
 		end
 	end
 
+	def destroy
+		@film = Film.find(params[:id])
+		@film.destroy
+		redirect_to pictures_url
+	end
+
 	private
 	def film_params
 		params.require(:film).permit(:artist, :title, :url)
