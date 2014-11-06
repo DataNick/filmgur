@@ -1,0 +1,6 @@
+<h1>Cinema Verite</h1>
+
+<% @films.each do |film| %>
+<p><%= film [:title] %>, <%= film [:artist] %></p>
+<img src="<%= film[:url] %>">
+<% end %>
