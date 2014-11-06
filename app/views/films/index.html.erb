@@ -1,6 +1,8 @@
-<h1>Film de Cinema</h1>
+<h1>Film de Cinema (<%= @films.length %>)</h1>
+
+<%= link_to "New Film", "/films/new" %>
 
 <% @films.each do |film| %>
-<p><%= film.title %>, <%= film.artist %></p>
-<img src="<%= film.url %>">
+  <p><%= film.title %>, <%= film.artist %></p>
+  <%= link_to image_tag(film.url), "/films/#{film.id}" %>
 <% end %>

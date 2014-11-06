@@ -1,4 +1,5 @@
-<h1>Current Picture</h1>
+<h1>Current Clip</h1>
+<%= link_to "Back to Films", films_url %>
 
 <p><%= @film.title %>, <%= @film.artist %></p>
-<img src="<%= @film.url %>">"
+<%= image_tag @film.url %>
