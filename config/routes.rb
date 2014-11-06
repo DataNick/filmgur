@@ -6,7 +6,12 @@ Rails.application.routes.draw do
   # get 'films/1' => 'films#film1'
   # get 'films/2' => 'films#film2'
 
+  post 'films' => 'films#create'
+  get 'films/new' => 'films#new'
+
   get 'films/:id' => 'films#show', as: 'film'
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
