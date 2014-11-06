@@ -1,5 +1,6 @@
 <h1>Current Clip</h1>
-<%= link_to "Back to Films", films_url %>
+<%= link_to "Back to Clips", films_url %> | <%= link_to "Edit", edit_film_path(@film) %>
+
 
 <p><%= @film.title %>, <%= @film.artist %></p>
 <%= image_tag @film.url %>

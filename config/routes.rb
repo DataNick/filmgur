@@ -9,6 +9,9 @@ root 'films#index'
   post 'films' => 'films#create'
   get 'films/new' => 'films#new'
 
+   get 'films/:id/edit' => "films#edit", as: "edit_film"
+  patch 'films/:id' => "films#update"
+
   get 'films/:id' => 'films#show', as: 'film'
 
 
